@@ -2,7 +2,7 @@ let guess = document.getElementById('guess');
 let submitGuess = document.getElementById('submitGuess');
 let feedback = document.getElementById('feedback');
 
-console.log('it works')
+// console.log('it works')
 
 // generate random number
 const rand = Math.floor(Math.random() * 20) + 1;
@@ -10,13 +10,16 @@ console.log("we good");
 
 // // number of guess trial
 let trial = 0;
-// alert('15' === 15)
+
 function checkGuess() {
 
   let myGuess = guess.value;
   if (trial < 5) {
-  
+
+  // increase tiral by 1
     trial++
+
+    // if else statements to check guess
     if (myGuess == rand) {
       feedback.textContent = ("Yaay Correct!");
       submitGuess.removeEventListener('click', checkGuess);
